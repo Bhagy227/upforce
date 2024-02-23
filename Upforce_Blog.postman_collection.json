@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "42bd5ff8-6921-4302-ab37-e2bbd418e90d",
+		"name": "Upforce_Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19398038"
+	},
+	"item": [
+		{
+			"name": "Add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"nayan123456\",\r\n    \"email\":\"nayanpatel123456@gmail.com\",\r\n    \"password\":\"123456789\",\r\n    \"age\":22,\r\n    \"bio\":\"uisdhfsifshdidjdhfidsfhefiehfiucsndidhweifefkcjnsfiehfecjscudffvbefsncskdcneoifbfxckcvnsdfuebccvuodsbhvecnxccvjdhbndfu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "tphJn8d3bakmW2zxNv8Fsy64oRw6DucOgsNYGMJj6xZTRrutcRx0VDElLsGFmhfY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"arjun456\",\r\n    \"description\":\"kjsdkjhakdsjfhkjasdgfjkasgdjkfhgadsf\",\r\n    \"content\":\"azdsasd,a,sndlakjsdlkjalksjdlkajslkdjlaksjdlkajsldkjalksjdlaksjdlkajsldkjalskjdlaksjdlakjsdlkasjdlakjsd\",\r\n    \"private\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token",
+						"value": "cXmTPeJngw5uRx8Ph0F9vniy0mmbXmDw88j2qjqCOg11CPGKaMd9x3glhoBvc9ev",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":1,\r\n    \"like\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add_like/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add_like",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "cXmTPeJngw5uRx8Ph0F9vniy0mmbXmDw88j2qjqCOg11CPGKaMd9x3glhoBvc9ev",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user_data/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user_data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User profile update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Ms2YPI3F6n2Lpi7ow4F5SdflLbmddRgRmxQDcmJbGFWW0nH5k57zOBnAzDgAXoW9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"vivek\",\r\n    \"bio\":\"This is vivek python dev\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user_update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user_update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User post update by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token",
+						"value": "tphJn8d3bakmW2zxNv8Fsy64oRw6DucOgsNYGMJj6xZTRrutcRx0VDElLsGFmhfY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":1,\r\n    \"title\":\"akshay_123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post_update/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post_update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"value": "Ms2YPI3F6n2Lpi7ow4F5SdflLbmddRgRmxQDcmJbGFWW0nH5k57zOBnAzDgAXoW9",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token",
+						"value": "ZgNSYlsJwO07hQ4e7AWF5YztTJYM4i4P1ewPeUOrjrYnhYNn3EALbDCx9bfC05U2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete_post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "cXmTPeJngw5uRx8Ph0F9vniy0mmbXmDw88j2qjqCOg11CPGKaMd9x3glhoBvc9ev",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/all_post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"all_post",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
